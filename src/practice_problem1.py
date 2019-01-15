@@ -42,8 +42,8 @@ def main():
 
     # run_test_init()
     # run_test_append_string()
-    run_test_double()
-    # run_test_shrink()
+    # run_test_double()
+    run_test_shrink()
     # run_test_double_then_shrink()
     # run_test_reset()
     # run_test_steal()
@@ -107,7 +107,7 @@ class Box(object):
         self.volume = volume
 
         if len(contents) > volume:
-            self.contents = contents[len(contents)-volume]
+            self.contents = contents[len(contents) - volume]
 
     def append_string(self, additional_contents):
         """
@@ -270,7 +270,23 @@ class Box(object):
         # IMPORTANT: Write a solution to this problem in pseudo-code,
         # and THEN translate the pseudo-code to a solution.
         # ---------------------------------------------------------------------
-        self.volume = self.new_volume
+        vol = new_volume
+
+        if len(self.contents) > vol:
+            self.contents = self.contents[len(self.contents) - vol]
+
+        remaining_space = self.volume - len(self.contents)
+        remain = ''
+        if remaining_space <= 0:
+            return self.additional_contents
+        for k in range(len(self.additional_contents)):
+            if k < remaining_space:
+                self.contents = self.contents + self.additional_contents[k]
+            else:
+                remain = remain + self.additional_contents[k]
+        return remain
+
+
     def double_then_shrink(self, new_volume):
         """
         What comes in:
