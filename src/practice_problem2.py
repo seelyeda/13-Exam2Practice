@@ -86,7 +86,7 @@ def practice_problem2a(sequence, delta):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
-
+    sequence =
 
 def run_test_practice_problem2b():
     """ Tests the   practice_problem2b  function. """

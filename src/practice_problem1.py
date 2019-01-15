@@ -40,7 +40,7 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    run_test_init()
+    # run_test_init()
     # run_test_append_string()
     # run_test_double()
     # run_test_shrink()
@@ -163,8 +163,9 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
+        self.contents
 
-        self.contents = contents + additional_contents
+
     def double(self):
         """
         What comes in:
