@@ -164,15 +164,15 @@ class Box(object):
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
         remaining_space = self.volume - len(self.contents)
-        leftover = ''
+        remain = ''
         if remaining_space <= 0:
             return additional_contents
         for k in range(len(additional_contents)):
             if k < remaining_space:
                 self.contents = self.contents + additional_contents[k]
             else:
-                leftover = leftover + additional_contents[k]
-        return leftover
+                remain = remain + additional_contents[k]
+        return remain
 
     def double(self):
         """
