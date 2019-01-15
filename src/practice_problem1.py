@@ -40,7 +40,7 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    # run_test_init()
+    run_test_init()
     # run_test_append_string()
     # run_test_double()
     # run_test_shrink()
@@ -95,7 +95,7 @@ class Box(object):
           :type volume: int
         """
         # ---------------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # DONE: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -103,6 +103,11 @@ class Box(object):
         #    DIFFICULTY:      3
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
+        self.contents = contents
+        self.volume = volume
+
+        if len(contents) > volume:
+            self.contents = contents[len(contents)-volume]
 
     def append_string(self, additional_contents):
         """
@@ -159,6 +164,7 @@ class Box(object):
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
 
+        self.contents = contents + additional_contents
     def double(self):
         """
         What comes in:
