@@ -44,7 +44,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4    ** tests that, taken together,
     #   would form a    ** REASONABLY GOOD test set **
@@ -59,6 +59,17 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected = [6, 9, 12, 17]
+
+    print(expected)
+    actual = practice_problem2a([2, 5, 8, 13])
+    print(actual)
+    # Test 2:
+    expected = [7, 10, 15]
+    print(expected)
+    actual = practice_problem2a([3, 6, 12])
+    print(actual)
 
 def practice_problem2a(sequence, delta):
     """
@@ -86,6 +97,11 @@ def practice_problem2a(sequence, delta):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
+
+    for k in range(len(sequence)-1):
+        sequence = sequence[k]+delta
+
+
 
 
 def run_test_practice_problem2b():
