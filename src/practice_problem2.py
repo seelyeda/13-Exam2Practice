@@ -60,15 +60,16 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
 
     # Test 1:
-    expected = [6, 9, 12, 17]
-
+    expected = [7, 9, 12, 17]
     print(expected)
-    actual = practice_problem2a([2, 5, 8, 13])
+    print(4)
+    actual = practice_problem2a([3, 5, 8, 13], 4)
     print(actual)
     # Test 2:
-    expected = [7, 10, 15]
+    expected = [6, 9, 15]
     print(expected)
-    actual = practice_problem2a([3, 6, 12])
+    print(3)
+    actual = practice_problem2a([3, 6, 12], 3)
     print(actual)
 
 def practice_problem2a(sequence, delta):
@@ -97,9 +98,10 @@ def practice_problem2a(sequence, delta):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
-
     for k in range(len(sequence)-1):
-        sequence = sequence[k]+delta
+        sequence[k] = sequence[k] + delta
+
+    return sequence
 
 
 
