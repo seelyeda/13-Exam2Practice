@@ -91,7 +91,7 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     WRITE THE TESTS FIRST (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -212,7 +212,17 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
+    seq3 = ''
+    for k in range(len(sequence)):
+        seq = sequence[k]
+        if sequence[k] == '':
+            None
+        else:
+            seq2 = seq[0]
+            seq3 = seq3 + seq2
 
+
+    return seq3
 
 
 ###############################################################################
